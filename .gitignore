@@ -361,3 +361,37 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# --- Unity ---
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+sysinfo.txt
+
+# Unity auto-generated
+*.pidb
+*.booproj
+*.stacktrace
+
+# Build artefacts
+*.apk
+*.aab
+*.app
+*.exe
+*.dll
+*.pdb
+*.mdb
+*.unitypackage
+
+# TextMesh Pro auto-generated
+[Tt]extMesh Pro/
+
+# Rider / JetBrains IDE
+.idea/
+*.sln.iml
