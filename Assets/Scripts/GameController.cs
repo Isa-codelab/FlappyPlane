@@ -25,9 +25,15 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private float proximoLevel = 10f;
 
+    [SerializeField] private AudioClip soundLevelUp;
+
+    //variavel para armazenar a posicao da camera
+    private Vector3 cameraposicao;
+
     void Start()
     {
-
+        //atribuindo a posicao da camera
+        cameraposicao = Camera.main.transform.position;
     }
 
     void Update()
@@ -46,6 +52,7 @@ public class GameController : MonoBehaviour
 
         if (score >= proximoLevel)
         {
+            AudioSource.PlayClipAtPoint(soundLevelUp, cameraposicao);
 
             level++;
             levelText.text = "Level: " + level.ToString();
