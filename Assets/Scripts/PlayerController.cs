@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] private GameObject puff;
 
     private Rigidbody2D rb;
     void Start()
@@ -21,6 +22,8 @@ public class PlayerController : MonoBehaviour
         MoveUp();
 
         VelocityLimited();
+
+        LimitFieldOutput();
 
     }
 
@@ -38,6 +41,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector2.up * moveSpeed;
+            GameObject mypuff = Instantiate(puff, transform.position, Quaternion.identity);
+            Destroy(mypuff, 0.4f);
         }
     }
 
@@ -45,4 +50,13 @@ public class PlayerController : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }  
+
+    private void LimitFieldOutput()
+    {
+        if(transform.position.y < -5.5f || transform.position.y > 5.5f)
+        {
+            SceneManager.LoadScene("Game");
+        }
+        
+    }
 }
