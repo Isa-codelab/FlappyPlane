@@ -68,7 +68,7 @@ public class GameController : MonoBehaviour
         timer -= Time.deltaTime;
         if (timer <= 0f)
         {
-            timer = Random.Range(spawntMin, spawntMax);
+            timer = Random.Range(spawntMin/level, spawntMax);
 
             posicao.y = Random.Range(posMin, posMax);
 
