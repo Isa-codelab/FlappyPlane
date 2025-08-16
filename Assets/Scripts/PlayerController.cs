@@ -15,15 +15,26 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         //movimento vertical do player
-        if (Input.GetKey(KeyCode.Space))
-        {
-            rb.velocity = Vector2.up * moveSpeed;
-        }
+        MoveUp();
 
-        //limita a velocidade 
+        VelocityLimited();
+
+    }
+
+    private void VelocityLimited()
+    {
+
         if (rb.velocity.y < -moveSpeed)
         {
             rb.velocity = Vector2.down * moveSpeed;
+        }
+    }
+
+    public void MoveUp()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+            rb.velocity = Vector2.up * moveSpeed;
         }
     }
 }
