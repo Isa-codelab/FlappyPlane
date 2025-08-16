@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
+    private int level = 1;
     private float score = 0f;
+
+    [SerializeField] private TextMeshProUGUI levelText;
+
     [SerializeField] private float spawntMax = 3f;
     [SerializeField] private float spawntMin = 1f;
 
@@ -18,6 +22,9 @@ public class GameController : MonoBehaviour
     [SerializeField] private float posMax = 3f;
 
     [SerializeField] private TextMeshProUGUI scoreText;
+
+    [SerializeField] private float proximoLevel = 10f;
+
     void Start()
     {
         
@@ -29,8 +36,24 @@ public class GameController : MonoBehaviour
 
         SpawnObstacle();
 
+        LevelUp();
+
     }
 
+
+    private void LevelUp(){
+
+        if (score >= proximoLevel)
+        {
+            
+            level ++;
+            levelText.text = "Level: " + level.ToString();
+            proximoLevel *= 2f;
+
+            Debug.Log("Level Up! Level: " + level);
+        }
+
+    }
     private void Scores()
     {
         
@@ -39,7 +62,6 @@ public class GameController : MonoBehaviour
         scoreText.text = "Score: " + Mathf.RoundToInt(score).ToString();
 
     }
-
     private void SpawnObstacle()
     {
         timer -= Time.deltaTime;
