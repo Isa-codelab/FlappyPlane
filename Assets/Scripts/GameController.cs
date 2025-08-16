@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -41,12 +41,13 @@ public class GameController : MonoBehaviour
     }
 
 
-    private void LevelUp(){
+    private void LevelUp()
+    {
 
         if (score >= proximoLevel)
         {
-            
-            level ++;
+
+            level++;
             levelText.text = "Level: " + level.ToString();
             proximoLevel *= 2f;
 
@@ -56,7 +57,7 @@ public class GameController : MonoBehaviour
     }
     private void Scores()
     {
-        
+
         score += Time.deltaTime;
 
         scoreText.text = "Score: " + Mathf.RoundToInt(score).ToString();
@@ -73,5 +74,10 @@ public class GameController : MonoBehaviour
 
             Instantiate(obstacle, posicao, Quaternion.identity);
         }
+    }
+
+    public int GetLevel()
+    {
+        return level;
     }
 }
