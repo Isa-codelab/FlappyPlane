@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
+
     private Rigidbody2D rb;
     void Start()
     {
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     public void MoveUp()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = Vector2.up * moveSpeed;
         }

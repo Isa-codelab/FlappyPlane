@@ -44,3 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71184364d402d841b9717bf9d989ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 1
+  obstacle: {fileID: 2595660865445359026, guid: 87ac63958b79f5440b543f92114baa26, type: 3}
+  posicao: {x: 0, y: 0, z: 0}
