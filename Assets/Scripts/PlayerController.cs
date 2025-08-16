@@ -48,14 +48,14 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(0);
     }  
 
     private void LimitFieldOutput()
     {
         if(transform.position.y < -5.5f || transform.position.y > 5.5f)
         {
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene(0);
         }
         
     }
