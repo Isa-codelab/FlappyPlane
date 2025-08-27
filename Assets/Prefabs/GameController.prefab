@@ -44,14 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71184364d402d841b9717bf9d989ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextLevel: 10
   levelText: {fileID: 0}
+  scoreText: {fileID: 0}
   spawntMax: 3
   spawntMin: 1
+  posMin: -0.5
+  posMax: 3
   timer: 1
   obstacle: {fileID: 2595660865445359026, guid: 87ac63958b79f5440b543f92114baa26, type: 3}
   posicao: {x: 0, y: 0, z: 0}
-  posMin: -0.5
-  posMax: 3
-  scoreText: {fileID: 0}
-  proximoLevel: 10
   soundLevelUp: {fileID: 8300000, guid: d949933b6a3ed114984ca9f272339c71, type: 3}

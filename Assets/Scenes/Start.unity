@@ -471,6 +471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1210833370}
+  - component: {fileID: 1210833371}
   m_Layer: 0
   m_Name: Start
   m_TagString: Untagged
@@ -494,6 +495,18 @@ Transform:
   - {fileID: 396508128}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1210833371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210833369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5190bdef2dadf0439e2078ec8b5db1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2375014375809082352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -598,14 +611,6 @@ PrefabInstance:
     - target: {fileID: 383942212679475398, guid: fab84f0b3d760bd49ac3ecff3f483cdc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315256450059642033, guid: fab84f0b3d760bd49ac3ecff3f483cdc, type: 3}
-      propertyPath: levelText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315256450059642033, guid: fab84f0b3d760bd49ac3ecff3f483cdc, type: 3}
-      propertyPath: scoreText
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6911681882049682717, guid: fab84f0b3d760bd49ac3ecff3f483cdc, type: 3}
       propertyPath: m_Name
