@@ -28,8 +28,6 @@ public class GameController : MonoBehaviour
 
     private Vector3 cameraposition;
     private GameServices gameService;
-
-    //variavel para armazenar a posicao da camera
     
 
     void Start()
