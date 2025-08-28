@@ -32,14 +32,20 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        if (Camera.main != null)
+            cameraposition = Camera.main.transform.position;
+        else
+            cameraposition = Vector3.zero;
+
         //atribuindo a posicao da camera
-        cameraposition = Camera.main.transform.position;
+        //cameraposition = Camera.main.transform.position;
         gameService = new GameServices();
     }
 
     void Update()
     {
-        score = gameService.ScoreCalculate(score);
+        float v = gameService.ScoreCalculate(score);
+        score = v;
         UpdateScoreUI();
 
         var result = gameService.CheckLevelUp(score, level, nextLevel);
@@ -50,7 +56,10 @@ public class GameController : MonoBehaviour
             nextLevel = result.NewNextLevel;
 
             UpdateLevelUI();
-            AudioSource.PlayClipAtPoint(soundLevelUp, cameraposition);
+            if (soundLevelUp != null)
+            {
+                AudioSource.PlayClipAtPoint(soundLevelUp, cameraposition);
+            }
         }
 
         SpawnObstacle();
@@ -118,4 +127,6 @@ public class GameController : MonoBehaviour
     {
         return level;
     }
+
+    public void SetLevel(int l) => level = l;   
 }

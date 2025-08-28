@@ -1,3 +1,4 @@
+using log4net.Core;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Build.Content;
@@ -13,13 +14,22 @@ public class ObstacleController : MonoBehaviour
     {
         Destroy(me, 5f);
 
-        game = FindObjectOfType<GameController>();
+        if(game == null)
+        {
+            game = FindObjectOfType<GameController>();
+
+        }
         
     }
     void Update()
     {
-        transform.position += Vector3.left * Time.deltaTime * velocity;
+        transform.position += Time.deltaTime * velocity * Vector3.left;
 
         velocity = 4f + game.GetLevel();
     }
+
+    public void InjectGameController(GameController g) => game = g;
+    public float GetVelocity() => velocity;
+
+    
 }

@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.RenderPipelines.Unive
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Sprite.Editor", "Unity.2D.Sprite.Editor.csproj", "{6FE327DD-51FF-D3D9-BCFC-444F7E2CBD39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsPlayMode", "TestsPlayMode.csproj", "{81AA688B-083B-0750-E450-D3F41C1E68F8}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.ShaderGraph.Utilities", "Unity.ShaderGraph.Utilities.csproj", "{4D96E73B-CEC5-3959-EB2E-7BC6204252BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test.csproj", "{459E556A-DFC6-3C9E-CAFF-55BAC97EFA2F}"
@@ -97,6 +99,10 @@ Global
 		{6FE327DD-51FF-D3D9-BCFC-444F7E2CBD39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FE327DD-51FF-D3D9-BCFC-444F7E2CBD39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FE327DD-51FF-D3D9-BCFC-444F7E2CBD39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81AA688B-083B-0750-E450-D3F41C1E68F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AA688B-083B-0750-E450-D3F41C1E68F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AA688B-083B-0750-E450-D3F41C1E68F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AA688B-083B-0750-E450-D3F41C1E68F8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D96E73B-CEC5-3959-EB2E-7BC6204252BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4D96E73B-CEC5-3959-EB2E-7BC6204252BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D96E73B-CEC5-3959-EB2E-7BC6204252BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
